@@ -102,6 +102,8 @@ def test_report_is_dynamic(tmp_path):
 
 
 def test_pdf_table_reading(tmp_path):
+    import pytest
+    pytest.importorskip("reportlab")
     from reportlab.lib import colors
     from reportlab.lib.pagesizes import A4
     from reportlab.platypus import SimpleDocTemplate, Table, TableStyle
